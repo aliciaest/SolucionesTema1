@@ -257,6 +257,8 @@ plot(cabbages$HeadWt, cabbages$VitC)
 
 ```
 ```{r}
+#b
+plot(cabbages$HeadWt, cabbages$VitC,pch=c(6,16)[cabbages$HeadWt])
 
 
 ```
