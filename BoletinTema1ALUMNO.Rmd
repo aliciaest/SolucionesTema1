@@ -185,12 +185,28 @@ head(libReturn$results, n=5)
 ```{r}
 #a
 head(cabbages)
+dim(cabbages)
+tail(cabbages)
+glimpse(cabbages)
+str(cabbages)
 
 ```
 ```{r}
 #b valores perdidos
-dim(cabbages)
+any(is.na(cabbages))
+colSums(sapply(cabbages, is.na))
 
+```
+```{r}
+#c repetimos proceso ahora con el conjunto de datos chile
+head(Chile)
+dim(Chile)
+tail(Chile)
+glimpse(Chile)
+str(Chile)
+#ahora los valores perdidos
+any(is.na(Chile))
+colSums(sapply(Chile, is.na))
 ```
 
 5.  Muchas pruebas estadísticas suponen que los datos siguen una distribución Gaussiana. Utiliza la aproximación visual proporcionada por **qqPlot** para determinar si podemos asumir que las variables **HeadWt** y **VitC** del conjunto **cabbages** verifican esta condición.
